@@ -121,13 +121,14 @@ G6.registerNode('example', {
     if (!matrix) matrix = mat3.create();
 
     // 3*3 矩阵变换，用于二维渲染
-    const newMatrix = trasform(matrix, [
+    const newMatrix = transform(matrix, [
       [ 't', 100, 50 ], // translate
       [ 'r', Math.PI / 4 ], // rotate
       [ 's', 2, 0.5 ], // scale
     ]);
 
     rect.setMatrix(newMatrix);
+    return rect
   }
 });
 ```
